@@ -1,0 +1,29 @@
+{
+  "name": "gulp-tasks",
+  "version": "0.0.1",
+  "description": "a summary of gulp tasks, that i use over various projects",
+  "main": "index.coffee",
+  "dependencies": {
+    "browserify": "^5.11.0",
+    "connect": "^3.2.0",
+    "gulp": "^3.8.7",
+    "gulp-embedlr": "^0.5.2",
+    "gulp-if": "^1.2.4",
+    "gulp-jade": "^0.7.0",
+    "gulp-less": "^1.3.5",
+    "gulp-livereload": "^2.1.1",
+    "gulp-notify": "^1.5.0",
+    "gulp-sourcemaps": "^1.2.2",
+    "gulp-util": "^3.0.1",
+    "serve-static": "^1.6.3",
+    "vinyl-source-stream": "^0.1.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mupat/gulp-tasks.git"
+  },
+  "author": "Mupat (dev@mupat.net)",
+  "license": "MIT",
+  "homepage": "https://github.com/mupat/gulp-tasks"
+}
