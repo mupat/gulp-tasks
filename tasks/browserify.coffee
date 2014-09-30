@@ -11,6 +11,7 @@ exports.build = (src, dest, name = 'app.js') ->
     extensions: [".coffee"]
 
   stream = browserify(options)
+            .transform("/node_modules/gulp-tasks/node_modules/coffeeify/index.js")
             .on('error', error.handler)
             .add(src)
             .bundle()
