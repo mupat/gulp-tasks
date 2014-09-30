@@ -5,6 +5,8 @@
   "main": "index.coffee",
   "dependencies": {
     "browserify": "^5.11.0",
+    "browserify-shim": "^3.7.0",
+    "coffeeify": "^0.7.0",
     "connect": "^3.2.0",
     "gulp": "^3.8.7",
     "gulp-embedlr": "^0.5.2",
@@ -25,5 +27,15 @@
   },
   "author": "Mupat (dev@mupat.net)",
   "license": "MIT",
-  "homepage": "https://github.com/mupat/gulp-tasks"
+  "homepage": "https://github.com/mupat/gulp-tasks",
+  "browserify": {
+    "transform": [
+      "coffeeify",
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "angular": "global:angular",
+    "leaflet": "global:L"
+  }
 }

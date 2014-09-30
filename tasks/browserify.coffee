@@ -6,17 +6,17 @@ error = require "#{__dirname}/error"
 
 exports = {}
 exports.build = (src, dest, name = 'app.js') ->
-    options = 
-      debug: gUtil.env.development
-      extensions: [".coffee"]
+  options = 
+    debug: gUtil.env.development
+    extensions: [".coffee"]
 
-    stream = browserify(options)
-              .on('error', error.handler)
-              .add(src)
-              .bundle()
+  stream = browserify(options)
+            .on('error', error.handler)
+            .add(src)
+            .bundle()
 
-    stream
-      .pipe(source(name))
-      .pipe(gulp.dest(dest))
+  stream
+    .pipe(source(name))
+    .pipe(gulp.dest(dest))
 
 module.exports = exports
