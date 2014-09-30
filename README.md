@@ -9,21 +9,21 @@ gTasks = require 'gulp-tasks'
 # Tasks
 ## Browserify
 ```coffeescript
-  gTasks.browserify.build '<src_file>', '<dest_folder', '[<name of result js file>]'
+gTasks.browserify.build '<src_file>', '<dest_folder', '[<name of result js file>]'
 ```
 
 ## Jade
 ```coffeescript
-  gTasks.jade.build '<src_file[s]>', '<dest_folder', '[<embed livereload script>]', '[<locals object passed to jade>]'
+gTasks.jade.build '<src_file[s]>', '<dest_folder', '[<embed livereload script>]', '[<locals object passed to jade>]'
 ```
 
 ## Less
 ```coffeescript
-  gTasks.less.build '<src_file[s]>', '<dest_folder>'
+gTasks.less.build '<src_file[s]>', '<dest_folder>'
 ```
 
 ## Livereload
 ```coffeescript
-  gTasks.livereload.contentServer '<dest_folder>'
-  gTasks.livereload.livereloadServer '<dest_folder>'
+gTasks.livereload.contentServer '<dest_folder>'
+gTasks.livereload.livereloadServer '<dest_folder>'
 ```
