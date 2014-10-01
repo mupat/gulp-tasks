@@ -3,6 +3,7 @@ gUtil = require 'gulp-util'
 browserify = require 'browserify'
 source = require 'vinyl-source-stream'
 error = require "#{__dirname}/error"
+coffeeify = require "coffeeify"
 
 exports = {}
 exports.build = (src, dest, name = 'app.js') ->
@@ -11,7 +12,7 @@ exports.build = (src, dest, name = 'app.js') ->
     extensions: [".coffee"]
 
   stream = browserify(options)
-            .transform("/node_modules/gulp-tasks/node_modules/coffeeify/index.js")
+            .transform((file) -> coffeeify file) # make sure, we use coffeeify from this node_modules
             .on('error', error.handler)
             .add(src)
             .bundle()
