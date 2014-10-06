@@ -5,7 +5,7 @@
   "main": "index.coffee",
   "dependencies": {
     "browserify": "^5.11.0",
-    "browserify-shim": "^3.7.0",
+    "browserify-global-shim": "^1.0.0",
     "coffeeify": "^0.7.0",
     "connect": "^3.2.0",
     "gulp": "^3.8.7",
@@ -20,22 +20,11 @@
     "serve-static": "^1.6.3",
     "vinyl-source-stream": "^0.1.1"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git://github.com/mupat/gulp-tasks.git"
   },
   "author": "Mupat (dev@mupat.net)",
   "license": "MIT",
-  "homepage": "https://github.com/mupat/gulp-tasks",
-  "browserify": {
-    "transform": [
-      "coffeeify",
-      "browserify-shim"
-    ]
-  },
-  "browserify-shim": {
-    "angular": "global:angular",
-    "leaflet": "global:L"
-  }
+  "homepage": "https://github.com/mupat/gulp-tasks"
 }
