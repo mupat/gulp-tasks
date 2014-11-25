@@ -7,7 +7,7 @@ error = require "#{__dirname}/error"
 
 exports = {}
 exports.build = (src, dest, embed = undefined, locals = {}) ->
-    port = gUtil.env.liveport || embed || 35729
+    port = if isNaN embed then gUtil.env.liveport || 35729 else gUtil.env.liveport || embed || 35729
     gulp.src(src)
       .pipe(gJade(
         pretty: gUtil.env.development
