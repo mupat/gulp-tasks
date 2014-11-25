@@ -13,9 +13,8 @@ exports.contentServer = (dest, port) ->
 exports.livereloadServer = (dest, port) ->
   port = gUtil.env.liveport || port || 35729
   gLivereload.listen port # start livereload server
-  server = gLivereload() # create server stream
   
   #add on every change in the build path, trigger livereload server changes
-  gulp.watch("#{dest}/**/*").on 'change', (file) -> server.changed file.path
+  gulp.watch("#{dest}/**/*").on 'change', (file) -> gLivereload.changed file.path, port
 
 module.exports = exports
