@@ -44,7 +44,7 @@ By providing a third parameter to the jade build you defining the port to for th
 
 
 ## Less
-Now with usage of the [autoprefix][autoprefixer] plugin. Possible options for supported browsers can be found at [browserlist][browserlist] plugin.
+Now with usage of the [autoprefix][autoprefix] plugin. Possible options for supported browsers can be found at [browserlist][browserlist] plugin.
 ```coffeescript
 gTasks.less.build '<src_file[s]>', '<dest_folder>', '[<array for supported browsers as defined by browserslist>] (OPTIONAL)'
 ```
@@ -67,7 +67,7 @@ gTasks.misc.copy '<src_file[s]>', '<dest_folder'
 gTasks.misc.clean '<folder_or_files>'
 ```
 
-[browserslist]: https://github.com/ai/browserslist
+[browserlist]: https://github.com/ai/browserslist
 [autoprefix]: https://github.com/postcss/autoprefixer
 [debowerify]: https://www.npmjs.com/package/debowerify
 [coffeeify]: https://www.npmjs.com/package/coffeeify
